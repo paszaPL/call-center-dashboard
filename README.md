@@ -1,38 +1,74 @@
-# call-center-dashboard
+# Call Center Dashboard
 
-This template should help get you started developing with Vue 3 in Vite.
+Panel do zarządzania zgłoszeniami w centrum obsługi klienta, zbudowany w Vue 3 z wykorzystaniem Vite.
 
-## Recommended IDE Setup
+## Live Demo
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[https://call-center-dashboard-rho.vercel.app/](https://call-center-dashboard-rho.vercel.app/)
 
-## Recommended Browser Setup
+## Funkcjonalności
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Lista zgłoszeń** — widok tabelaryczny (desktop) i kartowy (mobile)
+- **Szczegóły zgłoszenia** — podgląd pełnych informacji z możliwością zmiany statusu
+- **Filtrowanie** — po statusie (Nowe, W trakcie, Zamknięte) z licznikami
+- **Tryb ciemny / jasny** — przełączanie motywu z zapisem w localStorage
+- **Responsywność** — pełna obsługa urządzeń mobilnych i desktopowych
+- **Oznaczenia priorytetów** — wizualne badge'e (Wysoki, Średni, Niski)
+- **Oznaczenia statusów** — kolorowe wskaźniki stanu zgłoszenia
 
-## Customize configuration
+## Tech stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- [Vue 3](https://vuejs.org/) — Composition API
+- [Vite](https://vitejs.dev/) — build tool
+- [Pinia](https://pinia.vuejs.org/) — state management
+- [Vue Router](https://router.vuejs.org/) — routing
+- [SCSS](https://sass-lang.com/) — stylowanie z systemem zmiennych i motywów
 
-## Project Setup
+## Struktura projektu
 
-```sh
+```
+src/
+├── components/
+│   ├── LoadingSpinner.vue
+│   ├── PriorityBadge.vue
+│   ├── StatusBadge.vue
+│   ├── TicketFilters.vue
+│   └── icons/
+├── views/
+│   ├── TicketList.vue
+│   └── TicketDetail.vue
+├── stores/
+│   └── tickets.js
+├── router/
+│   └── index.js
+├── assets/
+│   └── style/
+│       ├── _variables.scss
+│       └── main.scss
+├── App.vue
+└── main.js
+```
+
+## Uruchomienie
+
+```bash
+# Instalacja zależności
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Serwer deweloperski
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# Build produkcyjny
 npm run build
+
+# Podgląd buildu
+npm run preview
 ```
+
+## Wymagania
+
+- Node.js >= 20.19.0
+
+## Licencja
+
+MIT

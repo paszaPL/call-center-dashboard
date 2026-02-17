@@ -16,11 +16,11 @@ onMounted(() => {
 	store.fetchTickets()
 })
 
-function goToTicket(id) {
+const goToTicket = (id) => {
 	router.push({ name: 'TicketDetail', params: { id } })
 }
 
-function formatDate(dateStr) {
+const formatDate = (dateStr) => {
 	return new Date(dateStr).toLocaleDateString('pl-PL', {
 		day: '2-digit',
 		month: '2-digit',
@@ -59,10 +59,7 @@ function formatDate(dateStr) {
 						</tr>
 					</thead>
 					<tbody>
-						<tr
-							v-for="ticket in filteredTickets"
-							:key="ticket.id"
-							class="ticket-table__row"
+						<tr v-for="ticket in filteredTickets" :key="ticket.id" class="ticket-table__row"
 							@click="goToTicket(ticket.id)">
 							<td class="ticket-table__id">
 								<span>#{{ ticket.id }}</span>
@@ -83,7 +80,8 @@ function formatDate(dateStr) {
 
 			<!-- Mobile cards -->
 			<div class="ticket-cards">
-				<div v-for="ticket in filteredTickets" :key="ticket.id" class="ticket-card" @click="goToTicket(ticket.id)">
+				<div v-for="ticket in filteredTickets" :key="ticket.id" class="ticket-card"
+					@click="goToTicket(ticket.id)">
 					<div class="ticket-card__top">
 						<span class="ticket-card__id">#{{ ticket.id }}</span>
 						<PriorityBadge :priority="ticket.priority" />

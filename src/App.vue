@@ -4,11 +4,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
 const isDark = ref(false)
 
-function applyTheme(dark) {
+const applyTheme = (dark) => {
 	document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
 }
 
-function toggleTheme() {
+const toggleTheme = () => {
 	isDark.value = !isDark.value
 	localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
 	applyTheme(isDark.value)

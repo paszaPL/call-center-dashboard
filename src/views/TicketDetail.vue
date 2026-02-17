@@ -40,7 +40,7 @@ const hasChanges = computed(() => {
 	return ticket.value && selectedStatus.value !== ticket.value.status
 })
 
-async function saveStatus() {
+const saveStatus = async () => {
 	if (!hasChanges.value) return
 	isSaving.value = true
 	try {
@@ -56,11 +56,11 @@ async function saveStatus() {
 	}
 }
 
-function goBack() {
+const goBack = () => {
 	router.push({ name: 'TicketList' })
 }
 
-function formatDate(dateStr) {
+const formatDate = (dateStr) => {
 	return new Date(dateStr).toLocaleDateString('pl-PL', {
 		day: '2-digit',
 		month: '2-digit',
@@ -74,15 +74,8 @@ function formatDate(dateStr) {
 <template>
 	<div class="detail">
 		<button class="detail__back" @click="goBack">
-			<svg
-				width="18"
-				height="18"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round">
+			<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+				stroke-linecap="round" stroke-linejoin="round">
 				<path d="M19 12H5" />
 				<polyline points="12 19 5 12 12 5" />
 			</svg>
@@ -103,30 +96,16 @@ function formatDate(dateStr) {
 				<h1 class="detail__subject">{{ ticket.subject }}</h1>
 				<div class="detail__meta">
 					<span class="detail__meta-item">
-						<svg
-							width="15"
-							height="15"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
 							<circle cx="12" cy="7" r="4" />
 						</svg>
 						{{ ticket.customerName }}
 					</span>
 					<span class="detail__meta-item">
-						<svg
-							width="15"
-							height="15"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
 							<line x1="16" y1="2" x2="16" y2="6" />
 							<line x1="8" y1="2" x2="8" y2="6" />
@@ -156,38 +135,20 @@ function formatDate(dateStr) {
 									{{ statusLabels[status] }}
 								</option>
 							</select>
-							<svg
-								class="detail__select-chevron"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round">
+							<svg class="detail__select-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<polyline points="6 9 12 15 18 9" />
 							</svg>
 						</div>
-						<button
-							class="detail__save-btn"
-							:class="{ 'detail__save-btn--disabled': !hasChanges }"
-							:disabled="!hasChanges || isSaving"
-							@click="saveStatus">
+						<button class="detail__save-btn" :class="{ 'detail__save-btn--disabled': !hasChanges }"
+							:disabled="!hasChanges || isSaving" @click="saveStatus">
 							<template v-if="isSaving">
 								<span class="detail__save-spinner"></span>
 								Zapisywanie...
 							</template>
 							<template v-else-if="showSaved">
-								<svg
-									width="16"
-									height="16"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2.5"
-									stroke-linecap="round"
-									stroke-linejoin="round">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+									stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
 									<polyline points="20 6 9 17 4 12" />
 								</svg>
 								Zapisano!
@@ -209,7 +170,9 @@ function formatDate(dateStr) {
 				</div>
 				<div class="detail__info-card">
 					<span class="detail__info-label">Priorytet</span>
-					<span class="detail__info-value"><PriorityBadge :priority="ticket.priority" /></span>
+					<span class="detail__info-value">
+						<PriorityBadge :priority="ticket.priority" />
+					</span>
 				</div>
 				<div class="detail__info-card">
 					<span class="detail__info-label">Data utworzenia</span>
