@@ -1,0 +1,58 @@
+// Colors – mapped to CSS custom properties for theme switching
+$color-bg: var(--color-bg);
+$color-bg-elevated: var(--color-bg-elevated);
+$color-bg-card: var(--color-bg-card);
+$color-bg-hover: var(--color-bg-hover);
+$color-border: var(--color-border);
+$color-border-light: var(--color-border-light);
+
+$color-text-primary: var(--color-text-primary);
+$color-text-secondary: var(--color-text-secondary);
+$color-text-muted: var(--color-text-muted);
+
+$color-accent: var(--color-accent);
+$color-accent-hover: var(--color-accent-hover);
+$color-accent-bg: var(--color-accent-bg);
+
+// Status colors
+$color-status-new: var(--color-status-new);
+$color-status-new-bg: var(--color-status-new-bg);
+$color-status-in-progress: var(--color-status-in-progress);
+$color-status-in-progress-bg: var(--color-status-in-progress-bg);
+$color-status-closed: var(--color-status-closed);
+$color-status-closed-bg: var(--color-status-closed-bg);
+
+// Priority colors
+$color-priority-high: var(--color-priority-high);
+$color-priority-high-bg: var(--color-priority-high-bg);
+$color-priority-medium: var(--color-priority-medium);
+$color-priority-medium-bg: var(--color-priority-medium-bg);
+$color-priority-low: var(--color-priority-low);
+$color-priority-low-bg: var(--color-priority-low-bg);
+
+// Spacing
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 48px;
+
+// Border radius
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 14px;
+
+// Shadows
+$shadow-sm: var(--shadow-sm);
+$shadow-md: var(--shadow-md);
+$shadow-lg: var(--shadow-lg);
+
+// Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+// Transitions
+$transition-fast: 150ms ease;
+$transition-normal: 250ms ease;
+$transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
