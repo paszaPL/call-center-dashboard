@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "customerName": "Jan Kowalski",
+    "subject": "Problem z logowaniem",
+    "description": "Nie mogę się zalogować do systemu od wczoraj.",
+    "priority": "high",
+    "status": "new",
+    "createdAt": "2024-02-06T10:30:00"
+  },
+  {
+    "id": 2,
+    "customerName": "Anna Nowak",
+    "subject": "Błąd podczas składania zamówienia",
+    "description": "Po kliknięciu 'Kup teraz' pojawia się błąd 500.",
+    "priority": "high",
+    "status": "in_progress",
+    "createdAt": "2024-02-07T09:15:00"
+  },
+  {
+    "id": 3,
+    "customerName": "Piotr Wiśniewski",
+    "subject": "Nie działa reset hasła",
+    "description": "Nie otrzymuję maila z linkiem do resetu hasła.",
+    "priority": "medium",
+    "status": "new",
+    "createdAt": "2024-02-07T11:42:00"
+  },
+  {
+    "id": 4,
+    "customerName": "Katarzyna Zielińska",
+    "subject": "Zmiana danych na fakturze",
+    "description": "Proszę o zmianę danych firmy na wystawionej fakturze.",
+    "priority": "low",
+    "status": "closed",
+    "createdAt": "2024-02-05T14:20:00"
+  },
+  {
+    "id": 5,
+    "customerName": "Tomasz Lewandowski",
+    "subject": "Strona ładuje się bardzo wolno",
+    "description": "Od kilku dni zauważyłem znaczne spowolnienie działania strony.",
+    "priority": "medium",
+    "status": "in_progress",
+    "createdAt": "2024-02-08T08:05:00"
+  },
+  {
+    "id": 6,
+    "customerName": "Magdalena Wójcik",
+    "subject": "Niepoprawne naliczanie rabatu",
+    "description": "Kod rabatowy nie obniża ceny w koszyku.",
+    "priority": "high",
+    "status": "new",
+    "createdAt": "2024-02-08T12:33:00"
+  },
+  {
+    "id": 7,
+    "customerName": "Paweł Kamiński",
+    "subject": "Problem z płatnością BLIK",
+    "description": "Transakcja BLIK została odrzucona mimo poprawnych danych.",
+    "priority": "high",
+    "status": "in_progress",
+    "createdAt": "2024-02-09T10:10:00"
+  },
+  {
+    "id": 8,
+    "customerName": "Ewa Dąbrowska",
+    "subject": "Brak potwierdzenia zamówienia",
+    "description": "Nie otrzymałam potwierdzenia zamówienia na e-mail.",
+    "priority": "medium",
+    "status": "new",
+    "createdAt": "2024-02-09T13:55:00"
+  },
+  {
+    "id": 9,
+    "customerName": "Michał Kaczmarek",
+    "subject": "Nie działa filtrowanie produktów",
+    "description": "Filtry rozmiaru i koloru nie zwracają poprawnych wyników.",
+    "priority": "medium",
+    "status": "in_progress",
+    "createdAt": "2024-02-10T09:40:00"
+  },
+  {
+    "id": 10,
+    "customerName": "Joanna Mazur",
+    "subject": "Prośba o usunięcie konta",
+    "description": "Chciałabym usunąć swoje konto i wszystkie dane osobowe.",
+    "priority": "low",
+    "status": "closed",
+    "createdAt": "2024-02-04T16:25:00"
+  }
+]
