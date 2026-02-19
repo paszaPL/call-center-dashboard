@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import { Analytics } from '@vercel/analytics/vue';
 
 const isDark = ref(false)
 
@@ -24,6 +25,7 @@ onMounted(() => {
 </script>
 
 <template>
+	<Analytics />
 	<div class="app-shell">
 		<nav class="app-nav">
 			<div class="app-nav__inner">
